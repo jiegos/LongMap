@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class LongMapImpl<V> implements LongMap<V> {
 
+    //some text
     private Node<V>[] table;
     private long size;
     private static final int DEFAULT_INITIAL_CAPACITY = 1<<4;
@@ -12,6 +13,7 @@ public class LongMapImpl<V> implements LongMap<V> {
     final float loadFactor;
     int threshold;
 
+    //some text
     public LongMapImpl(int initialCapacity, float loadFactor) {
         if (initialCapacity < 0)
             throw new IllegalArgumentException("Illegal initial capacity: " +
@@ -89,9 +91,8 @@ public class LongMapImpl<V> implements LongMap<V> {
                 return true;
             if (v instanceof Node) {
                 Node<?> e = (Node<?>) v;
-                if ((key == e.key) &&
-                        Objects.equals(value, e.getValue()))
-                    return true;
+                return (key == e.key) &&
+                        Objects.equals(value, e.getValue());
             }
             return false;
         }
