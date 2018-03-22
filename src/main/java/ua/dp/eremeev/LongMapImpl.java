@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class LongMapImpl<V> implements LongMap<V> {
 
-    //Some table test
+    //Sossssme table test
     private Node<V>[] table;
     private long size;
     private static final int DEFAULT_INITIAL_CAPACITY = 1<<4;
